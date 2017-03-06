@@ -139,7 +139,7 @@ REM *****************************
 REM ** REQUIRES psloggedon!! **
 REM ***************************
 echo *****psloggedon -l >> IR_Results.txt 
-tools\psloggedon -accepteula -l >> IR_Results.txt 2>NUL
+tools\psloggedon /accepteula -l >> IR_Results.txt 2>NUL
 echo. >> IR_Results.txt
 
 
@@ -211,18 +211,18 @@ set /p list="Enter PIDs of suspicious processes which require further interrogat
 	REM       where applicable
 	REM ******************************************************************************************************
 	echo 	*****pslist %%a >> IR_Results.txt
-	tools\pslist %%a >> IR_Results.txt 2>NUL
+	tools\pslist %%a /accepteula >> IR_Results.txt 2>NUL
 	echo. >> IR_Results.txt
 
 	echo *****listdlls %%a >> IR_Results.txt
-	tools\listdlls %%a -accepteula >> IR_Results.txt 2>NUL
+	tools\listdlls %%a /accepteula >> IR_Results.txt 2>NUL
 	echo. >> IR_Results.txt
 
 	REM ************************************************************************************************************
 	REM	Open file handles, files opened locally, files opened remotely.
 	REM *******************************************************************
 	echo 	*****handle %%a >> IR_Results.txt
-	tools\handle %%a >> IR_Results.txt 2>NUL
+	tools\handle %%a /accepteula >> IR_Results.txt 2>NUL
 	echo. >> IR_Results.txt
 
 
