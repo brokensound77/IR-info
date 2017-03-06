@@ -3,7 +3,7 @@ REM IR Information Gatherer Tool
 REM Justin Ibarra
 REM For: UTSA, IS6973, ADvanced Digital Forensics
 REM Synopsis:
-REM     Processed Memory Gathering
+REM     Processed Memory Information Gathering
 REM 
 REM Dependencies:
 REM     psloggedon (sysinternals) (included)
@@ -276,6 +276,8 @@ echo END OF REPORT >> IR_Results.txt
 
 
 REM ************************************************************************************************************
+echo REPORT GENERATED AND SAVED AS "IR_Results.txt"
+echo.
 echo SHA1 HASH OF REPORT:
 echo.
 tools\fciv -sha1 IR_Results.txt > report_hash.txt
