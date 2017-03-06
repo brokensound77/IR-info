@@ -191,10 +191,10 @@ tasklist >> IR_Results.txt
 echo. >> IR_Results.txt
 
 
-REM **
-REM **
-REM Loop Through suspiscuious processes
-REM **
+REM ************************************************************************************************************
+REM 					Loop Through suspiscuious processes
+REM ************************************************************************************************************
+
 echo Refer to the end of IR_Results.txt to identify suspicious processes. Make note of the PIDs for for further processing. (CLOSE REPORT PRIOR TO PROCEEDING!)
 notepad IR_Results.txt
 set /p xyz="If report is closed, hit inter to continue..."
@@ -227,9 +227,9 @@ set /p list="Enter PIDs of suspicious processes which require further interrogat
 
 
 ))
-REM ***
-REM ** End looping
-REM **
+REM ************************************************************************************************************
+REM 							 End looping
+REM ************************************************************************************************************
 
 
 REM ************************************************************************************************************
