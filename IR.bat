@@ -8,9 +8,9 @@ REM
 REM Dependencies:
 REM     psloggedon (sysinternals) (included)
 REM     pwdump7                   (included)
-REM     listdlls		  (included)
-REM     handle			  (included)
-REM     pslist			  (included)
+REM     listdlls   (sysinternals) (included)
+REM     handle	   (sysinternals) (included)
+REM     pslist	   (sysinternals) (included)
 REM **********************************************
 REM
 REM Directions:
@@ -61,8 +61,8 @@ REM **************************************************************
 REM The log(s) should provide the following data: 
 REM	Location where your VM folders and .vmem files are stored
 REM **************************************************************
-SET /p locationOfFiles="Enter the directory name where the vmem files are located: "
-echo %locationOfFiles%
+SET /p locationOfFiles="For record keeping, enter the directory name where the raw memory files are located (i.e. vmem) (leave blank if none): "
+REM echo %locationOfFiles%
 echo.
 echo vmem files located: >> IR_Results.txt
 echo %locationOfFiles% >> IR_Results.txt
@@ -195,9 +195,11 @@ REM ****************************************************************************
 REM 					Loop Through suspiscuious processes
 REM ************************************************************************************************************
 
-echo Refer to the end of IR_Results.txt to identify suspicious processes. Make note of the PIDs for for further processing. (CLOSE REPORT PRIOR TO PROCEEDING!)
+echo Refer to the end of IR_Results.txt to identify suspicious processes. Make note of the PIDs for for further processing.
+echo.
+set /p xyz="Hit enter to view partial report results...(CLOSE REPORT TO PROCEED WITH SCRIPT AFTER!)"
 notepad IR_Results.txt
-set /p xyz="If report is closed, hit inter to continue..."
+echo.
 set /p list="Enter PIDs of suspicious processes which require further interrogation (seperated by a single space): "  
 (for %%a in (%list%) do ( 
    echo Details for %%a below: >> IR_Results.txt
@@ -276,6 +278,7 @@ echo END OF REPORT >> IR_Results.txt
 
 
 REM ************************************************************************************************************
+echo.
 echo REPORT GENERATED AND SAVED AS "IR_Results.txt"
 echo.
 echo SHA1 HASH OF REPORT:
