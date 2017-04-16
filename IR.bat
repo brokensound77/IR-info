@@ -1,7 +1,8 @@
 @echo off
 REM IR Information Gatherer Tool
 REM Justin Ibarra
-REM For: UTSA, IS6973, ADvanced Digital Forensics
+REM MIT License
+REM For: UTSA, IS6973, Advanced Digital Forensics
 REM Synopsis:
 REM     Processed Memory Information Gathering
 REM 
@@ -13,10 +14,6 @@ REM     handle	   (sysinternals) (included)
 REM     pslist	   (sysinternals) (included)
 REM **********************************************
 REM
-REM Directions:
-REM   command line tools: append the output to a simple text file. 
-REM   GUI tools: provide targeted screen shots in a Word doc. 
-REM   place five asterisks (*****) before each command or tool name, example:  ***** date /t
 REM 
 REM *****************************************************************************************
 REM *****************************************************************************************
@@ -61,7 +58,7 @@ REM **************************************************************
 REM The log(s) should provide the following data: 
 REM	Location where your VM folders and .vmem files are stored
 REM **************************************************************
-SET /p locationOfFiles="For record keeping, enter the directory name where the raw memory files are located (i.e. vmem) (leave blank if none): "
+SET /p locationOfFiles="For record keeping, enter the directory name where any raw memory files are located (i.e. vmem) (leave blank if none): "
 REM echo %locationOfFiles%
 echo.
 echo vmem files located: >> IR_Results.txt
