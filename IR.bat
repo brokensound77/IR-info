@@ -66,7 +66,8 @@ if not "%locationOfFiles%"=="" (
 	echo %locationOfFiles% >> IR_Results.txt
 ) else (
 	echo "None specified" >> IR_Results.txt
-)echo. >>  IR_Results.txt
+)
+echo. >>  IR_Results.txt
 
 
 REM	Date/time you started and ended your incident response
